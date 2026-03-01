@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ghep-video
+    runtime: python
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update
+      apt-get install -y ffmpeg
+    startCommand: python app.py{\rtf1}
